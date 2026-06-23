@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Website Launcher</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="hero">
+        <p class="eyebrow">Personal links</p>
+        <h1>Save the websites you open most.</h1>
+        <p class="subtitle">A lightweight bookmark board that opens any link in one click.</p>
+      </section>
+
+      <section class="card">
+        <form id="site-form" class="form">
+          <label>
+            <span>Name</span>
+            <input id="site-name" type="text" placeholder="Docs, Inbox, Dashboard" maxlength="40" required />
+          </label>
+
+          <label>
+            <span>URL</span>
+            <input id="site-url" type="url" placeholder="https://example.com" required />
+          </label>
+
+          <button type="submit">Save site</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <h2>Saved sites</h2>
+          <button id="open-all" class="ghost-button" type="button">Open all</button>
+        </div>
+        <div id="empty-state" class="empty-state">
+          No sites saved yet. Add your first one above.
+        </div>
+        <ul id="site-list" class="site-list" aria-live="polite"></ul>
+      </section>
+    </main>
+
+    <template id="site-item-template">
+      <li class="site-item">
+        <button class="site-link" type="button"></button>
+        <button class="remove-button" type="button" aria-label="Remove site">Remove</button>
+      </li>
+    </template>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

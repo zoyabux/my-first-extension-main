@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Personal Website Launcher",
+  "version": "1.0",
+  "description": "Save and open your favorite websites from a personalized popup.",
+  "action": {
+    "default_title": "Personal Website Launcher",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage", "tabs"]
+}
